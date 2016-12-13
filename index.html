@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="device=device-width, initial-scale=1">
+	<title>Mé webové stránky</title>
+		<link href="style.css" rel="stylesheet">
+		<link href="css/nav.css" rel="stylesheet">
+	<script type="text/javascript">
+		var scrollY = 0;
+		var distance = 60;
+		var speed = 12;
+
+		function autoScrollTo(el){
+			var currentY = window.pageYOffset;
+			var targetY = document.getElementById(el).offsetTop;
+			var bodyHeight = document.body.offsetHeight;
+			var yPos = currentY + window.innerHeight;
+			var animator = setTimeout('autoScrollTo(\''+el+'\')', speed);
+
+			if(yPos > bodyHeight){
+				clearTimeout(animator);
+			}
+			else{
+				if(currentY < targetY-distance){
+					scrollY = currentY+distance;
+					window.scroll(0, scrollY);
+				}
+				else{
+					clearTimeout(animator);
+				}
+			}
+		}
+		function resetScroller(el){
+		var currentY = window.pageYOffset;
+		var targetY = document.getElementById(el).offsetTop;
+		var animator = setTimeout('resetScroller(\''+el+'\')', 5);
+		if(currentY > targetY){
+			scrollY = currentY-distance;
+			window.scroll(0, scrollY);
+		}
+		else{
+			clearTimeout(animator);
+		}
+	}
+	</script>
+</head>
+<body>
+<!-- Start Box -->
+<div id="box">
+
+<div class="clearfix"></div>
+
+<!-- Start Banner -->
+<div id="banner">
+	<img src="img/banner.jpeg">
+</div>
+<!-- End Banner -->
+<!-- Start Nav -->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/main.js"></script>
+
+<div class="nav-wrap">
+	<nav class="navigation">
+		<div class="nav" nav-menu-style=yoga>
+			<ul class="nav-menu">
+			<li class="active"><a href="index.html">Úvod</a></li>
+			<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('homer');">Homer</a></li>
+			<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('marge');">Marge</a></li>
+			<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('bart');">Bart</a></li>
+			<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('lisa');">Líza</a></li>
+			<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('maggie');">Maggie</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<!-- End Nav -->
+
+
+
+
+<!-- Start Home -->
+<h2>O mně</h2>
+
+<section>
+<p>Jmenuji se Dominik Reck. Je mi 20 let, pocházím z Karviné a tohle je má první webová stránka! Vystudoval jsem střední odbornou školu Net Office v Orlové.</p>
+<p>Již od malička se věnuji sportům všeho druhu. Prošel jsem si sporty jako Tae-kwon-do, fotbal, tenis a nakonec stolní tenis, který jsem trénoval do svých 18 let. Od té doby jsem přešel i na jiné zálibi jako např. cyklistika, počítačové hry, sledování přirodovědných dokumentů a teď i se učím tvořit webové stránky. Nerad bych dělal stránku o sobě, tak jsem si zvolil jiné a pro mě přijemnější téma a to je můj oblíbený seriál - Simpsonovi.</p>
+
+
+<h2>Simpsonovi - základní informace</h2>
+
+<p>	Simpsonovi jsou americký animovaný seriál vytvořený Mattem Groeningem v produkci Jamese L. Brookse pro televizní síť FOX. Seriál satiricky pojednává o životě americké střední třídy představované rodinkou Simpsonů, zahrnující Homera, Marge, Barta, Lízu, Maggie, dědu Simpsona, psa Spasitele a kočku Sněhulku.</p>
+<p>Odehrává se ve fiktivním městě kdesi ve Spojených státech, Springfieldu. Paroduje americkou kulturu, společnost, televizi a mnoho aspektů lidského života obecně. Groening pojmenoval animovanou rodinku po členech své vlastní rodiny, přičemž Bart (anagram angl. brat - spratek) měl představovat samotného Matta. Simpsonovi jsou nejdéle vysílaným animovaným seriálem v historii americké televize, seriál má aktuálně 600 odvysílaných dílů ve 28 řadách</p>
+</section>
+<!-- End Home -->
+
+<!-- Start Homer -->
+<h2 id="homer">Homer Simpson</h2>
+<center><img class="obrazky" src="img/homer.png"></center>
+<section>
+<p>Homer Jay Simpson je hlavní postava animovaného seriálu Simpsonovi.
+Homer Simpson je manželem Marge a otec Barta, Lízy a Maggie Simpsonových. Je synem Mony Simpsonové a Abrahama Simpsona. Homer za prvních 500 epizod seriálu vykonával více než 188 různých povolání. Ve většině epizod ovšem pracuje jako bezpečnostní technik ve Springfieldské jaderné elektrárně, tuto pozici v zaměstnání získal v epizodě Homerova odysea (první série). V ní je Homer často ignorován a vůbec zapomínán jeho vedoucím a ředitelem elektrárny Montgomerym Burnsem a často během výkonu svého povolání usíná.</p>
+<p>Matt Groening se pro Homerovo povolání rozhodl, protože jako bezpečnostní technik v jaderné elektrárně má potenciál vyvolat velkou neplechu. Každé z dalších zaměstnání trvalo pouze jednu epizodu, v první polovině seriálu scenáristé vymýšleli důvody vyhazovů z elektrárny a také zpětného návratu na místo bezpečnostního technika ve Springfieldské elektrárně. V dalších dílech často Homer přijímá nové zaměstnání jako možnou novou práci, ale vždy si to rozmyslí, bez jakýchkoliv dopadů na svoje původní zaměstnání v jaderné elektrárně.</p>
+</section>
+<!-- End Homer -->
+
+<!-- Start Marge -->
+<h2 id="marge">Marge Simsonová</h2>
+<center><img class="obrazky" src="img/marge.png"></center>
+<section>
+<p>Je milující a trpělivou manželkou Homera Simpsona a starostlivou matkou Barta Simpsona, Lízy Simpsonové a Maggie Simpsonové. Její otec byl steward. Její nejvýraznější rys je její půlmetrový modrý drdol na hlavě; v mládí měla však vlasy dlouhé a rozpuštěné. Její matka je má také podobné. A je velmi pyšná, že nikdy nepotkala nikoho s vyššími vlasy. Má hnědé oči jako oříšek. Zelené šaty a červené korále kolem krku.
+V českém vysílání ji dabuje Jiří Lábus.</p>
+<p>Marge stráví většinu svého času děláním domácích prací, hlídáním Maggie, ukázňováním Barta nebo chráněním jej před vztekem Homera. Marge ztělesňuje klasickou americkou paní domu z padesátých let.
+Matt Groening jí dal jméno po své matce Margaret „Marge“ Groeningové.</p>
+</section>
+<!-- End Marge -->
+
+<!-- Start Bart -->
+<h2 id="bart">Bart Simpson</h2>
+<center><img class="obrazky" src="img/bart.png"></center>
+<section>
+<p>Bartoloměj JoJo „Bart“ Simpson je jedna z hlavních postav animovaného seriálu Simpsonovi. Je jediným synem Homera a Marge Simpsonových. Je mu 10 let. Mezi jeho zájmy patří skateboarding, vandalství, animovaný pořad Itchy & Scratchy a komiksy (Radioaktivní muž). Jeho úhlavní nepřátelé jsou Levák Bob, kterého už Bart několikrát poslal za mříže, a ředitel základní školy Seymour Skinner. Jeho idol je Šáša Krusty.</p>
+<p>V seriálu se také objevuje jako výtržník s pseudonymem El Barto. Jeho nejlepším přítelem je Milhouse Van Houten. Na výlety a exkurze nosí červenou kšiltovku. Velice rád používá telefon k naštvání a znemožnění Vočka Szyslaka průpovídkami jako: – „Je tam chlapík jménem W. C. Hajzl?“ – „Je tam Herma Frodit(ová)“ – „Je tam pan Vilí Zanej?“. – „Je tam Al, příjmení Koholik?“ Jednou opět zavolal se slovy: – „Je tam Olí Znusinudle?“. Tentokrát však zvedl telefon Homer, který Vočka zastupoval a vtip nepochopil.</p>
+</section>
+<!-- End Bart -->
+ 
+<!-- Start Líza -->
+<h2 id="lisa">Líza Simpsonová</h2>
+<center><img class="obrazky" src="img/lisa.png"></center>
+<section>
+<p>Líza Simpsonová je jedna z hlavních postav animovaného seriálu Simpsonovi. Její celé jméno zní Lisa Marie Simpsonová. Je sestrou Barta Simpsona a Maggie Simpsonové a dcerou Homera a Marge. Žije společně s rodinou ve Springfieldu. Líza je velmi inteligentní dívka (její IQ je 156). Učení se jí vždy zdá lehké.</p> 
+<p>Jejím největším koníčkem je hra na saxofon, má ráda především jazz a blues. Líza je buddhistka, ráda se zabývá historickými, filozofickými nebo vědeckými problémy. Zajímá se také o politiku, kde zastává krajně levicové postoje. Ráda se učí a snaží se recyklovat odpad. Pod stromečkem by však nejraději viděla poníka. Má kočku Sněhulku II. Je zapřisáhlou vegetariánkou a ekologickou aktivistkou. Matt Groening jí dal jméno po své sestře Lise Groeningové.</p>
+</section>
+<!-- End Líza -->
+
+<!--Start Maggie -->
+<h2 id="maggie">Maggie Simpsonová</h2>
+<center><img class="obrazky" src="img/maggie.png"></center>
+<section>
+<p>Maggie (Margaret) Simpsonová je nejmladší člen seriálové rodiny Simpsonových. Je obvykle oblečená do modrých dupaček, ale v zimě bývá oblečená do oranžové kombinézy, ve které vypadá jako mořská hvězdice. Většinu času a ráda žužlá dudlík.
+</p>
+<p>Její první slovo bylo Daddy (Daddah) - táta. Naproti tomu její první slovo ve filmu Simpsonovi ve filmu bylo sequel (pokračování) - cz dub: „bude dvojka?“ a v jednom díle bylo její první slovo "Jo", nebo "Ja" (v norštině). Umí manipulovat se střelnými zbraněmi. Zachránila Homerovi život. Na svůj věk je velice inteligentní, i přesto, že jí ze školy pro mimořádně nadané vyhodili. Matt Groening jí dal jméno po své sestře Maggie Groeningové.</p>	
+</section>
+<!-- End Maggie -->
+<p id="zpet"><a href="#" onclick="return false" onmousedown="resetScroller('box');">Zpět k úvodu</a></p>
+
+<div class="clearfix"></div>
+
+<footer>
+<p>&copy; Reck Dominik, 2016.</p>
+</footer>
+
+</div><!-- End Box-->
+
+</body>
+</html>
